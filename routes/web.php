@@ -1,11 +1,10 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EventController;
 
-Route::get('/', [EventController::class, 'index'])->name('event.index');
-
 Route::get('/', function() {
-return view('index');
+    return view('index');
 });
 
 Route::get('/create', function() {
@@ -14,6 +13,7 @@ Route::get('/create', function() {
 
 Route::resource('event', EventController::class);
 
+Route::get('/', [EventController::class, 'index'])->name('event.index');
 Route::get('/events', [EventController::class, 'index'])->name('events.index');
 Route::get('/events/create', [EventController::class, 'create'])->name('events.create');
 Route::post('/events', [EventController::class, 'store'])->name('events.store');

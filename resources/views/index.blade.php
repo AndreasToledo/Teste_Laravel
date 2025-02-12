@@ -6,8 +6,9 @@
     <title>Agenda das motinha</title>
 </head>
 <body>
-    <h1>Faz os baga aí menó, atrasa não fi</h1><br><br>
+    <h1>Faz os baga aí menó, atrasa não fi</h1><br>
     <h1>Eventos</h1>
+
     @if(session('success'))
         <p>{{ session('success') }}</p>
     @endif

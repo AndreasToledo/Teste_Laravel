@@ -10,7 +10,7 @@ class EventController extends Controller
     public function index()
     {
         $events = Event::all();
-        return view('events.index', compact('events'));
+        return view('index', compact('events'));
     }
     
     public function store(Request $request){
@@ -23,6 +23,6 @@ class EventController extends Controller
         $event=new Event($validatedData);
         $event->save();
 
-        return redirect()->route('event.index')->with('success', 'Evento criado com sucesso!');
+        return redirect()->route('events.index')->with('success', 'Evento criado com sucesso!');
     }
 };
