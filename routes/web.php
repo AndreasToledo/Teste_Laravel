@@ -2,9 +2,15 @@
 
 use App\Http\Controllers\EventController;
 
+Route::get('/', [EventController::class, 'index'])->name('event.index');
+
 Route::get('/', function() {
 return view('index');
 });
+
+Route::get('/create', function() {
+    return view('create');
+})->name('create');
 
 Route::resource('event', EventController::class);
 
