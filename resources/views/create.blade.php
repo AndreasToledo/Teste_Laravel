@@ -18,7 +18,7 @@
         <label for="date">Data:</label>
         <input type="date" id="date" name="date" required><br><br>
         
-        <button type="submit">Salvar Evento</button>
+        <button type="submit">Salvar Evento</button><br><br><br><br>
     </form>
     <button onclick="window.location.href='{{ route('event.index') }}'">Voltar para a Lista de Eventos</button>
 </body>
