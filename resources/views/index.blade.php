@@ -15,11 +15,15 @@
     @if($events->isEmpty())
         <p>Não há eventos cadastrados no momento.</p>
     @else
-        <ul>
-            @foreach($events as $event)
-                <li>{{ $event->name }} - {{ $event->date }}</li>
-            @endforeach
-        </ul>
+    <ul>
+        @foreach($events as $event)
+            <li>
+                <strong>{{ $event->name }}</strong><br>
+                Descrição: {{ $event->description }}<br>
+                Data: {{ $event->date }}
+            </li>
+        @endforeach
+    </ul>
     @endif
     <button onclick="location.href='{{ route('create') }}'">Criar novo evento</button><br><br>
 </body>
